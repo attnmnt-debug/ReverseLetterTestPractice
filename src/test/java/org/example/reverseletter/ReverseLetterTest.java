@@ -32,21 +32,27 @@ public class ReverseLetterTest {
     }
     //5. Только буквы "abcd" → "dcba" (обычный разворот).
     @Test
-    public void reverse_ShouldReverseLetters_ifContainsLetters(){
+    public void reverse_shouldReverseLetters_ifContainsLetters(){
         String result = reverseLetter.reverse("abcd");
         Assertions.assertEquals("dcba", result);
     }
     //6. Небуквенные символы по краям и в середине — проверьте, что они остались на своих позициях.
     @Test
-    public void reverse_ShouldKeepSpecialCharastersinPlace_ifContainsSpecialCharacters(){
+    public void reverse_shouldKeepSpecialCharastersinPlace_ifContainsSpecialCharacters(){
         String result = reverseLetter.reverse("!ab#cd%");
         Assertions.assertEquals("!dc#ba%", result);
     }
     //7. Регистр — буквы меняются местами вместе со своим регистром (заглавная едет туда, куда едет буква).
     @Test
-    public void reverse_ShouldKeepSizeofLetter_ifReverseThisLetter(){
+    public void reverse_shouldKeepSizeofLetter_ifReverseThisLetter(){
         String result = reverseLetter.reverse("AbCd");
         Assertions.assertEquals("dCbA", result);
+    }
+    //8. Вывод пустой строки со значением null.
+    @Test
+    public void reverse_shouldReturnEmptyString_ifContainsNull(){
+        String result = reverseLetter.reverse(null);
+        Assertions.assertEquals("", result);
     }
 
 
