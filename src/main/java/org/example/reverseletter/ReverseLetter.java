@@ -9,7 +9,13 @@ public class ReverseLetter {
             return "";
         }
 
-        //
+        if (str.isEmpty()) {
+            return "";
+        }
+
+        if (str.length() < 2) {
+            return str;
+        }
 
         char[] chars = str.toCharArray();
 
